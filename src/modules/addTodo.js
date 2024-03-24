@@ -3,7 +3,4 @@ export default function addTodo(name, data){
     projects['projects'][name].push(data)
     console.log(projects)
     localStorage.setItem('projects', JSON.stringify(projects));
-
-console.log('a')
-
 }
