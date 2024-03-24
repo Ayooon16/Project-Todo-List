@@ -1,4 +1,5 @@
 import addProject from './modules/addProject';
+import addTodo from './modules/addTodo';
 import './style.css';
 function init() {
     if (localStorage.getItem('projects') === null) {
@@ -8,3 +9,11 @@ function init() {
 init()
 addProject('gym')
 addProject('run')
+const data = {
+    name: 'thing',
+    date: '2323',
+    something: 'xd',
+}
+
+addTodo('gym',data)
+addTodo('run',data)
