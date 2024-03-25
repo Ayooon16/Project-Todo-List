@@ -5,6 +5,10 @@ import deleteTodo from './modules/deleteTodo';
 import loadProjects from './modules/loadProjects';
 import loadTodos from './modules/loadTodos.js';
 import moomPic from './moom.jpg';
+import zetaPic from './zeta.jpg'
+import watamePic from './watame.png'
+import amePic from './ame.png'
+const pics = [zetaPic, moomPic, amePic, watamePic]
 import './style.css';
 function init() {
     if (localStorage.getItem('projects') === null) {
@@ -14,6 +18,8 @@ function init() {
 }
 window.onload = function () {
     addProjectsOnclick()
+    addVtubers()
+
 }
 function addDeleteOnclick() {
     const todos = document.querySelectorAll('.todoCard')
@@ -34,20 +40,32 @@ function addProjectsOnclick() {
         }
     });
 }
-function addMoom(){
-    let moom = new Image()
-    moom.src=moomPic
-    moom.id='moom'
-    document.body.appendChild(moom)
-    document.getElementById('something').onclick=showMoom
-}
-function showMoom(){
-document.getElementById('moom').style.visibility='visible'
+function showVtuber(vtubers){
+  const randomVtuber = vtubers[Math.floor(Math.random() * vtubers.length)]
+
+console.log('a')
+
+document.getElementById(randomVtuber).style.visibility='visible'
 setTimeout(function() {
-    document.getElementById('moom').style.visibility='hidden'
+    document.getElementById(randomVtuber).style.visibility='hidden'
 }, 1000)
 }
-addMoom()
+function addVtubers(){
+   const vtubers = ['zeta','moom','ame','watame']
+  let i=0
+vtubers.forEach(element => {
+  let pic = new Image()
+  pic.src= pics[i]
+  i = i + 1
+    pic.id=element
+    document.body.appendChild(pic)
+});    
+document.getElementById('something').onclick=function() {
+  showVtuber(vtubers);
+};
+
+}
+
 init()
 loadProjects()
 //addProject('else')
