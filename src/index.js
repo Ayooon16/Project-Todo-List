@@ -2,6 +2,7 @@ import addProject from './modules/addProject';
 import addTodo from './modules/addTodo';
 import deleteProject from './modules/deleteProject';
 import deleteTodo from './modules/deleteTodo';
+import loadProjects from './modules/loadProjects';
 import './style.css';
 function init() {
     if (localStorage.getItem('projects') === null) {
@@ -9,8 +10,9 @@ function init() {
     }
 }
 init()
-//addProject('gym')
-//addProject('run')
+loadProjects()
+//addProject('else')
+//addProject('something')
 const data = {
     name: 'thing',
     date: '2323',
