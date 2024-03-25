@@ -16,6 +16,10 @@ body {
     display: flex;
     flex-direction: column;
 }
+.todoCard>img{
+    object-fit: contain;
+    width: 2rem;
+}
 p{
     padding: 0px;
     margin: 0px;
