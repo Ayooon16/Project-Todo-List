@@ -12,6 +12,10 @@ body {
     background-color: #0D5577;
     border-radius: 20px;
 }
+#content{
+    display: flex;
+    flex-direction: column;
+}
 p{
     padding: 0px;
     margin: 0px;
@@ -25,7 +29,16 @@ header {
     grid-column: 1/3;
     background-color: #BA7BB2
 }
-
+.todoCard{
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    font-size: 25px;
+    padding: 5px;
+    background-color: #70405C;
+}
+.todoCard>p{padding:0 20px 0 50px}
 nav {
     padding: 20px 0 0 0;
     display: flex;
