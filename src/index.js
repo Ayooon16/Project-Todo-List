@@ -11,15 +11,27 @@ function init() {
     }
 
 }
-window.onload = function(){
+window.onload = function () {
+    addProjectsOnclick()
+}
+function addDeleteOnclick() {
+    const todos = document.querySelectorAll('.todoCard')
+    todos.forEach(element => {
+        element.children[2].onclick = function () {
+            deleteTodo(this.parentElement.dataset.project, this.parentElement.dataset.index)
+this.parentElement.remove()
+        }
+    });
+}
+function addProjectsOnclick() {
     const projects = document.querySelectorAll('.navCard')
-    console.log(projects)
-projects.forEach(element => {
-    element.onclick = function(){
-        loadTodos(this.firstChild.innerText)
+    projects.forEach(element => {
+        element.onclick = function () {
+            loadTodos(this.firstChild.innerText)
+            addDeleteOnclick()
 
-    }
-});
+        }
+    });
 }
 init()
 loadProjects()
