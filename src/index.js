@@ -4,6 +4,7 @@ import deleteProject from './modules/deleteProject';
 import deleteTodo from './modules/deleteTodo';
 import loadProjects from './modules/loadProjects';
 import loadTodos from './modules/loadTodos.js';
+import moomPic from './moom.jpg';
 import './style.css';
 function init() {
     if (localStorage.getItem('projects') === null) {
@@ -33,6 +34,20 @@ function addProjectsOnclick() {
         }
     });
 }
+function addMoom(){
+    let moom = new Image()
+    moom.src=moomPic
+    moom.id='moom'
+    document.body.appendChild(moom)
+    document.getElementById('something').onclick=showMoom
+}
+function showMoom(){
+document.getElementById('moom').style.visibility='visible'
+setTimeout(function() {
+    document.getElementById('moom').style.visibility='hidden'
+}, 1000)
+}
+addMoom()
 init()
 loadProjects()
 //addProject('else')
