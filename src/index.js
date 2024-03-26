@@ -19,8 +19,10 @@ function addDeleteOnclick() {
     todos.forEach(element => {
         element.children[2].onclick = function () {
             deleteTodo(this.parentElement.dataset.project, this.parentElement.dataset.index)
-this.parentElement.remove()
-        }
+            loadTodos(this.parentElement.dataset.project)
+            addDeleteOnclick()
+
+          }
     });
 }
 function addProjectsOnclick() {
@@ -35,7 +37,7 @@ function addProjectsOnclick() {
 }
 init()
 loadProjects()
-//addProject('else')
+//addProject('gym')
 //addProject('something')
 const data = {
     name: 'thing',
@@ -45,5 +47,5 @@ const data = {
 
 //deleteProject('run')
 //deleteTodo('run', 1)
-//addTodo('gym',data)
+addTodo('gym',data)
 //addTodo('run',data)
