@@ -9,5 +9,4 @@ form.id='form'
 inputWindow.appendChild(form)
 overlay.appendChild(inputWindow)
 document.body.appendChild(overlay)
-console.log('asd')
 }

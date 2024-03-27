@@ -69,12 +69,12 @@ header {
 }
 .todoCard>p{padding:0 20px 0 50px}
 nav {
-    padding: 20px 5px 0 5px;
+    padding: 20px 5px 20px 5px;
     display: flex;
     flex-direction: column;
     width: 100%;
     gap: 20px;
-    overflow-y: auto;
+    overflow-x: auto;
 }
 .menu > button{
     width: 100%;
@@ -91,7 +91,8 @@ nav {
     grid-column: 1/2;
     background-color: #656BA1;
     grid-row: 2/3;
-
+    min-width: 0;
+    min-height: 0;
     display: grid;
     grid-template-rows: 5fr 1fr;
 }
@@ -100,7 +101,7 @@ nav {
     border-radius: 20px;
     text-align: center;
     font-size: 20px;
-    padding: 25px;
+    padding: 20px;
     background-color: #70405C;
 }
 .overlay{

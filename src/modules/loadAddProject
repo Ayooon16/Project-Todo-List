@@ -1,3 +1,4 @@
+import addProject from "./addProject"
 import loadInputOverlay from "./loadInputOverlay"
 
 export default function loadAddProject() {
@@ -10,4 +11,10 @@ loadInputOverlay()
  form.appendChild(label)
  projectName.id='projectName'
  form.appendChild(projectName)
+ const btn = document.createElement('button')
+ btn.innerHTML='Add project'
+ btn.onclick=function(){
+    addProject(projectName.value)
+ }
+ form.appendChild(btn)
 }
