@@ -2,6 +2,7 @@ import addProject from './modules/addProject';
 import addTodo from './modules/addTodo';
 import deleteProject from './modules/deleteProject';
 import deleteTodo from './modules/deleteTodo';
+import loadInputOverlay from './modules/loadInputOverlay.js';
 import loadProjects from './modules/loadProjects';
 import loadTodos from './modules/loadTodos.js';
 import './style.css';
@@ -13,6 +14,7 @@ function init() {
 }
 window.onload = function () {
     addProjectsOnclick()
+    addButtonsOnclick()
 }
 function addDeleteOnclick() {
     const todos = document.querySelectorAll('.todoCard')
@@ -34,6 +36,10 @@ function addProjectsOnclick() {
 
         }
     });
+}
+function addButtonsOnclick(){
+    const apbtn = document.getElementById('add-project')
+    apbtn.onclick=loadInputOverlay
 }
 init()
 loadProjects()
