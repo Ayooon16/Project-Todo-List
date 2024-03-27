@@ -5,10 +5,19 @@ body {
     margin:0;
     padding:0;
     overflow-x:hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     
 }
 *{
     box-sizing: border-box;
+}
+#inputWindow{
+    width: 65.5rem;
+    height: 35rem;
+    background-color: #2a6b52;
+
 }
 #container {
     width: 82.5rem;
@@ -23,6 +32,9 @@ body {
     flex-direction: column;
     overflow-y: auto;
 
+}
+#inputWindow{
+    
 }
 .todoCard>img{
     object-fit: contain;
@@ -100,4 +112,7 @@ nav {
     backdrop-filter: blur(10px);
     top: 0;
     left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

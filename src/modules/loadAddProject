@@ -1,0 +1,13 @@
+import loadInputOverlay from "./loadInputOverlay"
+
+export default function loadAddProject() {
+
+loadInputOverlay()
+ const form=document.getElementById('form')   
+ const projectName = document.createElement('input')
+ const label=document.createElement('label')
+ label.innerHTML="Name of your project"
+ form.appendChild(label)
+ projectName.id='projectName'
+ form.appendChild(projectName)
+}

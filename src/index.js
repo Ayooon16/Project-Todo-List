@@ -2,6 +2,7 @@ import addProject from './modules/addProject';
 import addTodo from './modules/addTodo';
 import deleteProject from './modules/deleteProject';
 import deleteTodo from './modules/deleteTodo';
+import loadAddProject from './modules/loadAddProject';
 import loadInputOverlay from './modules/loadInputOverlay.js';
 import loadProjects from './modules/loadProjects';
 import loadTodos from './modules/loadTodos.js';
@@ -39,7 +40,7 @@ function addProjectsOnclick() {
 }
 function addButtonsOnclick(){
     const apbtn = document.getElementById('add-project')
-    apbtn.onclick=loadInputOverlay
+    apbtn.onclick=loadAddProject
 }
 init()
 loadProjects()
