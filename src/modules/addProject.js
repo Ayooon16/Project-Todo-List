@@ -1,3 +1,4 @@
+import addDeleteOnclick from "./addDeleteOnclick";
 import deleteOverlay from "./deleteOverlay";
 import loadProjects from "./loadProjects";
 
@@ -7,5 +8,5 @@ export default function addProject(name){
     localStorage.setItem('projects', JSON.stringify(projects));
     deleteOverlay()
     loadProjects()
-
+    addDeleteOnclick()
 }

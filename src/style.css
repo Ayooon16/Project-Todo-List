@@ -33,13 +33,11 @@ body {
     overflow-y: auto;
 
 }
-#inputWindow{
-    
-}
-.todoCard>img{
+.todoCard>img, .navCard>img{
     object-fit: contain;
-    width: 2rem;
+    width: 1.6rem;
 }
+
 p{
     padding: 0px;
     margin: 0px;
@@ -66,6 +64,10 @@ header {
     font-size: 25px;
     padding: 5px;
     background-color: #70405C;
+
+}
+.navCard>p{
+    padding-left: 20px;
 }
 .todoCard>p{padding:0 20px 0 50px}
 nav {
@@ -103,6 +105,9 @@ nav {
     font-size: 20px;
     padding: 20px;
     background-color: #70405C;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 .overlay{
     position: fixed;
