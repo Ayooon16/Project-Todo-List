@@ -1,4 +1,5 @@
 import delIcon from '../delete.png';
+import addDeleteOnclick from './addDeleteOnclick';
 export default function loadTodos(name) {
     console.log(name)
 document.getElementById('content').innerHTML = ''
@@ -11,6 +12,15 @@ let todoName = value[0]
 let todoDate = value[2]
 let priority = value[3]
 createTodoCard(todoName, todoDate, projectName,key, priority)
+}}
+else{
+for (const projectName in projects){
+    const project =projects[projectName]
+for (const [key, value] of Object.entries(project)){
+let todoName = value[0]
+let todoDate = value[2]
+let priority = value[3]
+createTodoCard(todoName, todoDate, projectName,key, priority)}
 }}
 }
 function createTodoCard(name, date, projectName, index, priority){
@@ -30,5 +40,6 @@ function createTodoCard(name, date, projectName, index, priority){
     deleteIcon.src=delIcon
     div.appendChild(deleteIcon)
     content.appendChild(div)
+    addDeleteOnclick()
 
 }

@@ -1,4 +1,16 @@
 import delIcon from '../delete.png';
+import addDeleteOnclick from './addDeleteOnclick';
+import loadTodos from './loadTodos';
+function addProjectsOnclick() {
+    const projects = document.querySelectorAll('.navCard')
+    projects.forEach(element => {
+        element.children[0].onclick = function () {
+            loadTodos(this.innerText)
+            addDeleteOnclick()
+
+        }
+    })
+}
 
 export default function loadProjects() {
     var projects = JSON.parse(localStorage.getItem('projects'));
@@ -16,4 +28,6 @@ export default function loadProjects() {
         div.appendChild(deleteIcon)
         nav.appendChild(div)
     }
+    addProjectsOnclick()
+
 }

@@ -11,19 +11,12 @@ function init() {
 
 }
 window.onload = function () {
-    addProjectsOnclick()
     addButtonsOnclick()
-}
-function addProjectsOnclick() {
-    const projects = document.querySelectorAll('.navCard')
-    projects.forEach(element => {
-        element.children[0].onclick = function () {
-            loadTodos(this.innerText)
-            addDeleteOnclick()
-
+        document.getElementById('all').onclick=function(){
+            loadTodos('ALL')
         }
-    });
 }
+
 function addButtonsOnclick() {
     const apbtn = document.getElementById('add-project')
     apbtn.onclick = loadAddProject
