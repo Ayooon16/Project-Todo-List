@@ -56,7 +56,7 @@ export default function loadAddTodo() {
     btn.id='btn'
     btn.innerHTML='Submit'
     btn.onclick=function(){
-       const data = [todoName.value, todoDescription.value, todoDate.value, document.querySelector('input[name="importance"]:checked').value]
+       const data = [todoName.value, todoDescription.value, todoDate.value, ((radio3.checked)? '3' : (radio2.checked)? '2' : '1')]
         addTodo(selectProject.value, data)
 
     }

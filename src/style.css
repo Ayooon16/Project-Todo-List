@@ -55,7 +55,9 @@ header {
     max-width: 100%;
 
 }
-
+.priority-high{border-left: solid 4px rgb(230, 20, 20);}
+.priority-medium{border-left: solid 4px rgb(248, 232, 0);}
+.priority-low{border-left: solid 4px rgb(28, 201, 28);}
 .todoCard{
     margin-bottom: 10px;
     display: flex;
