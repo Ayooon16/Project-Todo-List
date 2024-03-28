@@ -1,10 +1,11 @@
 import delIcon from '../delete.png';
 import addDeleteOnclick from './addDeleteOnclick';
+import editTodo from './editTodo';
 export default function loadTodos(name) {
     console.log(name)
 document.getElementById('content').innerHTML = ''
 const projectName = name
-var projects = JSON.parse(localStorage.getItem('projects'));
+let projects = JSON.parse(localStorage.getItem('projects'));
 projects = projects['projects']
 if (name!="ALL" && name!= null){
 for (const [key, value] of Object.entries(projects[name])){
@@ -39,6 +40,13 @@ function createTodoCard(name, date, projectName, index, priority){
     let deleteIcon = new Image()
     deleteIcon.src=delIcon
     div.appendChild(deleteIcon)
+    let btn = document.createElement('button')
+    btn.innerHTML='Edit'
+    btn.onclick=function(){
+        editTodo(projectName,index)
+
+    }
+    div.appendChild(btn)
     content.appendChild(div)
     addDeleteOnclick()
 

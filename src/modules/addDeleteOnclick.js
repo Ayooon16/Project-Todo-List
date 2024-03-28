@@ -15,9 +15,7 @@ export default function addDeleteOnclick() {
     });
     const projects = document.querySelectorAll('.navCard')
     projects.forEach(element => {
-        console.log(element)
         element.children[1].onclick = function () {
-            console.log(this.parentElement.dataset.project)
             deleteProject(this.parentElement.dataset.project)
            loadProjects()
             addDeleteOnclick()
