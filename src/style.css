@@ -90,3 +90,7 @@ button {
     background-repeat: no-repeat;
     background-size: contain;
   }
+  .vtuber{
+    max-width: 1000px;
+    max-height: 1000px;
+}
